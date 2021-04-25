@@ -14,9 +14,13 @@ def aswDisable():
 def changeBSPriority():
     BSOpen = False
     for proc in psutil.process_iter():
-        if proc.name() == 'BeatSaber.exe':
+        if proc.name() == 'Beat Saber.exe':
             BSOpen = True
             psutil.Process(proc.pid).nice(psutil.HIGH_PRIORITY_CLASS)
+            alertBox2 = QtWidgets.QMessageBox()
+            alertBox2.setWindowTitle("BSUtils")
+            alertBox2.setText("Beat Saber Priority Has Been Set To High!")
+            alertBox2.exec_()
     if BSOpen != True:
         alertBox = QtWidgets.QMessageBox()
         alertBox.setWindowTitle("BSUtils")
