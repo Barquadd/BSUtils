@@ -55,7 +55,7 @@ class Ui_Dialog(object):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "BSUtils"))
         self.pushButton.setText(_translate("Dialog", "Disable ASW"))
-        self.changePriority.setText(_translate("Dialog", "Change BS Priroity"))
+        self.changePriority.setText(_translate("Dialog", "Change BS Priority"))
 
 
 if __name__ == "__main__":
