@@ -8,4 +8,4 @@ This simply sets Beat Saber's task priority to High.
 
 ----
 
-Please don't expect a lot from this, I'm making this just as something to do in my free time. Please don't expect this to be some miracle fix.
+Please don't expect a lot from this, I'm making this just as something to do in my free time. Please don't expect this to be some miracle fix to all your lag.
