@@ -3,6 +3,12 @@ import subprocess
 import os
 import psutil
 
+# Check if user is using oculus
+if os.path.isfile(r'C:\Program Files\Oculus\Support\oculus-diagnostics\OculusDebugToolCLI.exe'):
+    oculusUser = True
+else:
+    oculusUser = False
+
 def aswDisable():
     #There is 100% a better way to do this but I'm not good at programming
     with open('aswDisable.bat', 'w') as aswDisableScript:
@@ -43,6 +49,8 @@ class Ui_Dialog(object):
         self.pushButton.clicked.connect(aswDisable)
         global aswDisableBtn
         aswDisableBtn = self.pushButton
+        if oculusUser == False:
+            aswDisableBtn.setEnabled(False)
         self.changePriority = QtWidgets.QPushButton(Dialog)
         self.changePriority.setGeometry(QtCore.QRect(140, 20, 111, 31))
         font = QtGui.QFont()
